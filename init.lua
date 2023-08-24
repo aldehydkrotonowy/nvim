@@ -1,0 +1,6 @@
+require('core.mappings')
+require('core.plugins')
+require('config.lualine')
+require('config.nvim-tree')
+require('config.onedark')
+require('config.which-key')
