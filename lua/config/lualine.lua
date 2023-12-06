@@ -1,4 +1,7 @@
-require('lualine').setup {
+local ll = require('lualine')
+
+
+ll.setup {
   options = {
     colored = true,
     icons_enabled = true,
@@ -9,3 +12,5 @@ require('lualine').setup {
 
 }
 vim.cmd.colorscheme 'onedark'
+
+return ll

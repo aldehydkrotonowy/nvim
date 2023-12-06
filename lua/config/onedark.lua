@@ -1,4 +1,7 @@
-require('onedark').setup {
+local onedark = require('onedark')
+
+
+onedark.setup {
   style = 'deep',
   -- toggle theme style ---
 
@@ -8,3 +11,5 @@ require('onedark').setup {
   toggle_style_list = { 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer', 'light' },
 }
 -- require('onedark').load()
+
+return onedark
