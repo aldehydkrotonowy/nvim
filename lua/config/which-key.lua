@@ -26,8 +26,16 @@ wk.register({
       n = { "<cmd>enew<cr>", "New File" },
       ["|"] = { "<cmd>vsplit<cr>", "Vertical Split" },
       ["-"] = { "<cmd>split<cr>", "Horizontal Split" },
+    },
+    c = {
+      name = "test",
+      o = {
+        function() require("neo-tree.command").execute({ toggle = true, dir = vim.loop.cwd() }) end,
+        "Explorer NeoTree (cwd)",
+      },
     }
-  },
+  }
+
 })
 
 return wk

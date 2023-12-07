@@ -10,6 +10,6 @@ onedark.setup {
   -- List of styles to toggle between
   toggle_style_list = { 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer', 'light' },
 }
--- require('onedark').load()
+onedark.load()
 
 return onedark
