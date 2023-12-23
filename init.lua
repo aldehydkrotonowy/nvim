@@ -1,6 +1,0 @@
-require('core.mappings')
-require('core.plugins')
-require('config.lualine')
-require('config.neo-tree')
-require('config.onedark')
-require('config.which-key')
