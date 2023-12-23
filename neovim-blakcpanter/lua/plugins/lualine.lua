@@ -5,21 +5,12 @@ return {
     options = {
       colored = true,
       icons_enabled = true,
-      theme = 'molokai',
+      theme = 'dracula',
       component_separators = '|',
       section_separators = '',
     },
   },
-  config = function(opts)
-    print("hello lualine", opts)
-    require("lualine").setup({
-      options = {
-        colored = true,
-        icons_enabled = true,
-        theme = 'molokai',
-        component_separators = '|',
-        section_separators = '',
-      },
-    })
+  config = function(_, opts)
+    require("lualine").setup(opts)
   end,
 }

@@ -4,6 +4,12 @@ return {
   init = function()
     vim.o.timeout = true
     vim.o.timeoutlen = 300
+    if vim.fn.argc(-1) == 1 then
+      local stat = vim.loop.fs_stat(vim.fn.argv(0))
+      if stat and stat.type == "directory" then
+        require("neo-tree")
+      end
+    end
   end,
   opts = {
     icons = {
@@ -34,9 +40,21 @@ return {
         },
         c = {
           name = "test",
-          o = {
+          e = {
             function() require("neo-tree.command").execute({ toggle = true, dir = vim.loop.cwd() }) end,
             "Explorer NeoTree (cwd)",
+          },
+          o = {
+            function()
+              require("neo-tree.command").execute(function()
+                if vim.bo.filetype == "neo-tree" then
+                  vim.cmd.wincmd "p"
+                else
+                  vim.cmd.Neotree "focus"
+                end
+              end)
+            end,
+            "Toggle Explorer Focus",
           },
         }
       }
