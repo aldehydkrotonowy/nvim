@@ -18,6 +18,8 @@ return {
     window = {
       mappings = {
         ["<space>"] = "none",
+        ["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = true } },
+        ["<C-/>"] = "open",
       },
     },
     default_component_configs = {

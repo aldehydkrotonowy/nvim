@@ -20,10 +20,11 @@ return {
   },
   config = function()
     local mappings = {
+
       ["<leader>"] = {
+        s = print("hello"),
         f = {
           name = "🔍 find",
-          f = { "<cmd>Telescope find_files<cr>", "Find File" },
           r = { function() return require('telescope.builtin').oldfiles end, "Open Recent File" },
           n = { "<cmd>enew<cr>", "New File" },
         },
@@ -35,8 +36,6 @@ return {
           q = { "<cmd>confirm q<cr>", "Quit" },
           Q = { "<cmd>confirm qall<cr>", "Quit all" },
           n = { "<cmd>enew<cr>", "New File" },
-          ["|"] = { "<cmd>vsplit<cr>", "Vertical Split" },
-          ["-"] = { "<cmd>split<cr>", "Horizontal Split" },
         },
         c = {
           name = "test",
@@ -44,18 +43,7 @@ return {
             function() require("neo-tree.command").execute({ toggle = true, dir = vim.loop.cwd() }) end,
             "Explorer NeoTree (cwd)",
           },
-          o = {
-            function()
-              require("neo-tree.command").execute(function()
-                if vim.bo.filetype == "neo-tree" then
-                  vim.cmd.wincmd "p"
-                else
-                  vim.cmd.Neotree "focus"
-                end
-              end)
-            end,
-            "Toggle Explorer Focus",
-          },
+          -- p = function() require("neo-tree.command").execute({ "toggle_preview", config = { use_float = false, use_image_nvim = true } }) end,
         }
       }
 
