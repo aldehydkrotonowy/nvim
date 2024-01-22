@@ -1,7 +1,10 @@
 to use this repo create symlink to nvim config folder
-ln -s ~/neovim-configs/neovim-blakcpanter/ ~/.config/nvim
-ln -s ~/neovim-configs/neovim-neovim-elephant/ ~/.config/nvim
+- ln -s ~/neovim-configs/neovim-blakcpanter/ ~/.config/nvim
+- ln -s ~/neovim-configs/neovim-neovim-elephant/ ~/.config/nvim
 
+- rm -rf ~/.local/share/nvim
+- rm -rf ~/.local/state/nvim
+- rm -rf ~/.cache/nvim
 
 
 # nvim-conf
