@@ -22,7 +22,7 @@ return {
     local mappings = {
 
       ["<leader>"] = {
-        s = print("hello"),
+        s = {},
         f = {
           name = "🔍 find",
           r = { function() return require('telescope.builtin').oldfiles end, "Open Recent File" },
